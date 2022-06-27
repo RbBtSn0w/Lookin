@@ -9,7 +9,7 @@
 #import "LKPreferenceManager.h"
 #import "LookinDashboardBlueprint.h"
 #import "LookinPreviewView.h"
-@import AppCenter;
+//@import AppCenter;
 
 NSString *const NotificationName_DidChangeSectionShowing = @"NotificationName_DidChangeSectionShowing";
 
@@ -197,7 +197,7 @@ static NSString * const Key_ReceivingConfigTime_Class = @"ConfigTime_Class";
         [[NSUserDefaults standardUserDefaults] setObject:@(enableReport) forKey:Key_EnableReport];
     }
     
-    MSACAppCenter.enabled = enableReport;
+//    MSACAppCenter.enabled = enableReport;
 }
 
 - (void)setRgbaFormat:(BOOL)rgbaFormat {

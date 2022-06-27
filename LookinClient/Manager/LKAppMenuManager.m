@@ -17,9 +17,9 @@
 #import "LKStaticHierarchyDataSource.h"
 #import "LKWindowController.h"
 #include <mach-o/dyld.h>
-#import <Sparkle/Sparkle.h>
-@import AppCenter;
-@import AppCenterAnalytics;
+//#import <Sparkle/Sparkle.h>
+//@import AppCenter;
+//@import AppCenterAnalytics;
 
 static NSUInteger const kTag_About = 11;
 static NSUInteger const kTag_Preferences = 12;
@@ -283,7 +283,7 @@ static NSUInteger const kTag_MoreIntegrationGuide = 68;
     }
     [wc appMenuManagerDidSelectExpansionIndex:index];
     
-    [MSACAnalytics trackEvent:@"Hierarchy Expansion" withProperties:@{@"level":[NSString stringWithFormat:@"%@", idxNum]}];
+//    [MSACAnalytics trackEvent:@"Hierarchy Expansion" withProperties:@{@"level":[NSString stringWithFormat:@"%@", idxNum]}];
 }
 
 - (void)_handleShowConfig {
@@ -351,7 +351,7 @@ static NSUInteger const kTag_MoreIntegrationGuide = 68;
 }
 
 - (void)_handleCheckUpdates {
-    [[SUUpdater sharedUpdater] checkForUpdates:self];
+//    [[SUUpdater sharedUpdater] checkForUpdates:self];
 }
 
 - (void)_handleShowFramework {

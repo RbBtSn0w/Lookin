@@ -7,8 +7,8 @@
 //
 
 #import "LKPerformanceReporter.h"
-@import AppCenter;
-@import AppCenterAnalytics;
+//@import AppCenter;
+//@import AppCenterAnalytics;
 
 
 @interface LKPerformanceReporter ()
@@ -41,15 +41,15 @@
     self.hierarchyFetchedTime = CACurrentMediaTime();
     
     NSString *desc = [self resolveDurationDescription:(CACurrentMediaTime() - self.reloadStartTime)];
-    [MSACAnalytics trackEvent:@"Perf(FetchHierarchy)" withProperties:@{@"time":desc}];
+//    [MSACAnalytics trackEvent:@"Perf(FetchHierarchy)" withProperties:@{@"time":desc}];
 }
 
 - (void)didComplete {
     NSString *desc = [self resolveDurationDescription:(CACurrentMediaTime() - self.hierarchyFetchedTime)];
-    [MSACAnalytics trackEvent:@"Perf(UpdateDetails)" withProperties:@{@"time":desc}];
+//    [MSACAnalytics trackEvent:@"Perf(UpdateDetails)" withProperties:@{@"time":desc}];
     
     NSString *desc2 = [self resolveDurationDescription:(CACurrentMediaTime() - self.reloadStartTime)];
-    [MSACAnalytics trackEvent:@"Perf(Reload)" withProperties:@{@"time":desc2}];
+//    [MSACAnalytics trackEvent:@"Perf(Reload)" withProperties:@{@"time":desc2}];
 }
 
 - (NSString *)resolveDurationDescription:(CFTimeInterval)duration {

@@ -20,8 +20,8 @@
 #import "LKConsoleViewController.h"
 #import "LKPreferenceManager.h"
 #import "LKAboutWindowController.h"
-@import AppCenter;
-@import AppCenterAnalytics;
+//@import AppCenter;
+//@import AppCenterAnalytics;
 
 @interface LKNavigationManager ()
 
@@ -92,7 +92,7 @@
     }
     [self.methodTraceWindowController showWindow:self];
     
-    [MSACAnalytics trackEvent:@"Launch MethodTrace"];
+//    [MSACAnalytics trackEvent:@"Launch MethodTrace"];
 }
 
 - (LKWindowController *)currentKeyWindowController {
